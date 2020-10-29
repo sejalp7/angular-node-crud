@@ -1,0 +1,12 @@
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+}
+
+.main-content {
+   align-items: center;
+   display: flex;
+   margin-left: 500px; /* Same as the width of the sidebar */
+   padding: 0px 10px;
+}

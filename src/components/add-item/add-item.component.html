@@ -1,0 +1,55 @@
+<div class="row mt-4 mx-5">
+  <div class="row" id="myForm">
+    <div class="col-sm-3 pb-3">
+      <label for="exampleFirst">First Name</label> 
+      <input class="form-control" [(ngModel)]="userDetail.firstName" type="text" name="firstName" id="firstName"  #firstName="ngModel">
+    </div>
+    <div class="col-sm-3 pb-3">
+      <label for="exampleLast">Last Name</label> 
+                          <input class="form-control" [(ngModel)]="userDetail.lastName" type="text" name="lastName" id="lastName">
+    </div>
+    <div class="col-sm-3 pb-3">
+      <label for="exampleCity">Contact No.</label> <input class="form-control" [(ngModel)]="userDetail.contactNo" type="number" 
+      name="contactNo"
+      id="contactNo"
+      >
+    </div>
+    <div class="col-sm-3 pb-3">
+        <label for="exampleCity">City</label>
+        <select class="form-control custom-select" [(ngModel)]="userDetail.city" name="city" id="city">
+            <option *ngFor="let city of cities">{{ city }}</option>
+          </select>
+    </div>
+    </div>
+  <ng-template #clone>
+    <div class="row" id="myForm">
+    <div class="col-sm-3 pb-3">
+      <label for="exampleFirst">First Name</label> 
+      <input class="form-control" [(ngModel)]="userDetail.firstName" type="text" required name="firstName" id="firstName"  #firstName="ngModel">
+    </div>
+    <div class="col-sm-3 pb-3">
+      <label for="exampleLast">Last Name</label> 
+                          <input class="form-control" [(ngModel)]="userDetail.lastName" type="text" required name="lastName" id="lastName">
+    </div>
+    <div class="col-sm-3 pb-3">
+      <label for="exampleCity">Contact No.</label> <input class="form-control" [(ngModel)]="userDetail.contactNo" type="number" 
+      name="contactNo"
+      id="contactNo"
+      required>
+    </div>
+    <div class="col-sm-3 pb-3">
+        <label for="exampleCity">City</label>
+        <select class="form-control custom-select" [(ngModel)]="userDetail.city" name="city" id="city">
+          <option *ngFor="let city of cities">{{ city }}</option>
+        </select>
+    </div>
+    </div>
+  </ng-template>
+  <div class="another-test" #container></div>
+</div>
+<div class="mx-5">
+           <input class="btn btn-primary mr-2" type="button" value="Add Row" (click)="addRow()">
+           <input class="btn btn-danger mr-2" type="reset" value="Delete Row"> 
+           <input class="btn btn-success" type="reset" value="Submit Details" (click)="submitDetails()"> 
+</div>
+  
